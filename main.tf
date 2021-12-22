@@ -1,11 +1,11 @@
-provider “aws” {
-	access_key = “AKIA4HA6CIR2TAKSISDM”
-	secret key = “qC7R1JQh+gIVBQX+yPN3dhLoyBm4KqrQq+2dfpC6”
-	region = “eu-central-1”
+provider "aws" {
+	access_key = "AKIA4HA6CIR2TAKSISDM"
+	secret key = "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"
+	region = "eu-central-1"
 }
-resource “aws_instance” “Ubuntu” {
-	ami = “ami-0a49b025fffbbdac6”
-	instance_type = “t2.micro”
+resource "aws_instance" "Ubuntu" {
+	ami = "ami-0a49b025fffbbdac6"
+	instance_type = "t2.micro"
         key_name = "katelinux"
 vpc_security_group_ids = [
     aws_security_group.allow_web_traffic.id
